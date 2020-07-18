@@ -10,6 +10,9 @@ const Kitchen = () => {
     
     const [newarray, setNewArray] = useState([])
     const [idOrderDeliver, setIdOrderDeliver] = useState('')
+    const [time, setTime] = useState({ms:0, s:0, m:0, h:0})
+    const [interv, setInterv]=useState();
+    
 
     const getUpate = () => {
         const db = firebase.firestore()
@@ -27,12 +30,43 @@ const Kitchen = () => {
  }
  useEffect(() => {
     getUpate()
+    start()
  }, [])
 
  const activateOrderDeliver = (item) => {
      console.log(item.id)
      console.log(item.name)
      setIdOrderDeliver(item.id)
+     stop(item.id)
+     
+ }
+ const start =()=>{
+     run()
+     setInterv(setInterval(run,10));
+ }
+ let updatedMs= time.ms, updatedS=time.s, updatedM=time.m, updatedH=time.h;
+
+ const run=() => {
+     if(updatedM===60){
+         updatedH++;
+         updatedM=0;
+
+     }
+     if(updatedS===60){
+         updatedM++;
+         updatedS=0;
+     }
+     if(updatedMs===100){
+        updatedS++;
+        updatedMs=0;
+     }
+     updatedMs++;
+     return setTime({ms:updatedMs, s:updatedS, m:updatedM, h:updatedH});
+ }
+
+ const stop =() =>{
+     clearInterval(interv);
+     
  }
 
  const addOrderDeliver = () => {
@@ -64,6 +98,11 @@ const Kitchen = () => {
 
     return (
         <main className="kitcherContainer">
+            <section className="btnKitchenReturn">
+                <Link to="/orden">
+                    <button className="returnButton">Volver</button>
+                </Link>
+            </section>
             {
                 newarray.map((item, index) => (
                     <section className="orderKitchen">
@@ -71,11 +110,18 @@ const Kitchen = () => {
                             <div className="containerTittleOrden">
                                 <div key={index}>
                                     <p className="nameTable">{item.name}</p>
+                                    
                                     <button type="button" 
                                     className="btnDeleteKitchen" 
                                     onClick={()=>deleteOrder(item.id)}
                                     ><img className="imgBtnDeleteKitchen" src="http://imgfz.com/i/GBTyIih.png" alt="" />
                                     </button>
+                                    <div className="clock-holder" time={time}>
+                                    <span>{(time.h >=10)? time.h : "0"+time.h}</span>&nbsp;:&nbsp;
+                                    <span>{(time.m >=10)? time.m : "0"+time.m}</span>&nbsp;:&nbsp;
+                                    <span>{(time.s >=10)? time.s : "0"+time.s}</span>&nbsp;:&nbsp;
+                                    <span>{(time.ms >=10)? time.ms : "0"+time.ms}</span>
+                                    </div>
                                 </div>        
                             </div>
 
@@ -112,6 +158,11 @@ const Kitchen = () => {
                                 Firebase
                             </button>
                             </Link>
+                            
+                               
+                            
+                            
+                            
                         </div>
                     </section>
                 ))

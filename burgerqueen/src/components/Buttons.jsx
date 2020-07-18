@@ -5,9 +5,11 @@ const Buttons = () => {
 
     return (
         <Fragment>
-            <div id="cookButtonContainer">
+            
+            <Link to="/cocina" id="cookButtonContainer">
                 <button id="cookButton">Cocinero</button>
-            </div>
+            
+            </Link>
             <Link to="/mesero" id="waiterButtonContainer">
                 <button id="waiterButton"> Mesero</button>
             </Link>
@@ -17,6 +19,5 @@ const Buttons = () => {
 }
 
 export default Buttons
-
 
 
