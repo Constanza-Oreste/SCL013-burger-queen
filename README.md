@@ -27,7 +27,10 @@ Conoce BurgerQueen haciendo click [aquí](https://burger-queen-2bad6.web.app/)
  * [5. Investigación UX](#5-investigación-ux)
  * [6. Planificación](#6-planificación)
  * [7. Objetivos de aprendizaje](#7-objetivos-de-aprendizaje)
- * [8. Aspectos a mejorar](#8-aspectos-a-mejorar)
+ * [8. Testing](#8-testing)
+ * [9. Git Tags](#9-git-tags)
+ * [10. Aspectos a mejorar](#10-aspectos-a-mejorar)
+ 
 
 ## 1. Definición de usuario
 
@@ -142,7 +145,7 @@ Para visitar el detalle de los resultados de los testeos de usabilidad haz click
 ## 6. Planificación
 Realizamos  nuestra planificación mediante la página ***miro***, semana a semana, poniéndonos metas por día y para garantizar una buena organización del proyecto.
 
-[!Planificacion](http://imgfz.com/i/hZ5Nb3G.png)
+![Planificacion](http://imgfz.com/i/hZ5Nb3G.png)
 
 ## 7. Objetivos de aprendizaje
 
@@ -153,7 +156,7 @@ A continuación detallamos los objetivos de aprendizaje que logramos en este pro
 * [x] Uso de selectores de CSS.
 * [x] Construir tu aplicación respetando el diseño realizado (maquetación).
 * [x] Uso de flexbox en CSS.
-* [ ] Uso de Media Queries.
+* [x] Uso de Media Queries.
 
 ### JavaScript
 * [x] Uso de condicionales (`if-else`| `switch`|`operador ternario`)
@@ -161,13 +164,13 @@ A continuación detallamos los objetivos de aprendizaje que logramos en este pro
 * [x] Manipular arrays (`filter`| `map`|`sort`| `reduce`)
 * [x] Manipular objects (`key`| `value`)
 * [x] Uso ES modules (`import`| `export`)
-* [ ] Diferenciar entre expression y statements.
-* [ ] Diferenciar entre tipos de datos atómicos y estructurados.
+* [x] Diferenciar entre expression y statements.
+* [x] Diferenciar entre tipos de datos atómicos y estructurados.
 * [x] Uso de callbacks.
 * [x] Consumo de Promesas.
 
 ### Testing
-* [ ] Testeo unitario.
+* [x] Testeo unitario.
 
 ### Estructura del código y guía de estilo
 * [x] Organizar y dividir el código en módulos (Modularización)
@@ -191,10 +194,10 @@ A continuación detallamos los objetivos de aprendizaje que logramos en este pro
 * [x] `JSX`
 * [x] Componentes `class` y componentes `function`
 * [x] `props`
-* [ ] Eventos en React.
+* [x] Eventos en React.
 * [x] Listas y keys.
 * [x] Renderizado condicional.
-* [ ] Elevación de estados.
+* [x] Elevación de estados.
 * [x] `hooks`
 * [x] `CSS` modules.
 * [x] React Router.
@@ -205,8 +208,12 @@ A continuación detallamos los objetivos de aprendizaje que logramos en este pro
 * [x] Aplicar los principios de diseño visual (contraste, alineación, jerarquía)
 * [x] Planear y ejecutar tests de usabilidad.
 
-## 8. Aspectos a mejorar
+## 8. Testing
+![Testing](http://imgfz.com/i/6qdomlC.jpeg)
+## 9. Git tags
+![GitTags](http://imgfz.com/i/S1fd5HI.png)
+## 10. Aspectos a mejorar
 
-- LLALALALALA
-- LALALALLA
-- LAALALLA
+- Hacer funcional el timer 
+- Mover funciones al Context 
+
